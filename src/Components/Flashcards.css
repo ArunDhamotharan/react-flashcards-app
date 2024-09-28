@@ -1,0 +1,185 @@
+.flashcards-page {
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(to right, #1e293b, #0f172a);
+    color: #ffffff;
+    font-family: "Caveat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deck-name {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.add-flashcard-button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flashcard-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Translucent white */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.flashcard-form input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.flashcard-form button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flashcards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.flashcard-item {
+    width: 150px;
+    height: 150px;
+    background-color: #34495e; /* Change to your preferred color */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.flashcard-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f172a; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; 
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    z-index: 1000; 
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.flashcard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    position: relative; 
+}
+
+.flashcard-front, .flashcard-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transition: transform 1s ease; 
+    transform-style: preserve-3d;
+}
+
+.flashcard-back {
+    background-color: #2c3e50; 
+    color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+.flipped .flashcard-front {
+    transform: rotateY(180deg);
+}
+
+.flipped .flashcard-back {
+    transform: rotateY(0deg);
+}
+
+.flashcard-question {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.flashcard-answer {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.show-answer-button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-answer-button:hover {
+    background-color: #0056b3;
+}
+
+.close-button, .edit-button, .delete-button {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-button {
+    top: 5px;
+    left: 5px;
+}
+
+.edit-button {
+    bottom: 5px;
+    left: 5px;
+}
+
+.delete-button {
+    bottom: 5px;
+    right: 5px;
+}
